@@ -65,7 +65,6 @@ public class FirePower extends CarroVermelho
         if(isTouching(Enemies.class))   
             {
                 getWorldOfType(Level1.class).addScore(10);
-                //score.score2= score.score2 +5 ;
                 removeTouching(Enemies.class);
                 setLocation(getX(), 0);
             }

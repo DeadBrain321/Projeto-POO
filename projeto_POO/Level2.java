@@ -17,5 +17,8 @@ public class Level2 extends World
     {    
         
         super(1200, 650, 1); 
+        addObject(new Gretha(), getWidth()/2,getHeight()-35);
+        
     }
+    
 }

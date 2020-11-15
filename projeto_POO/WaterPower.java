@@ -37,8 +37,8 @@ public class WaterPower extends CarroAzul
     {
         if(contador == 10)
         {
-            i+=1;
-            if(i>= imagens.length)  
+            i+=1; // faz animação
+            if(i>= imagens.length)  // verificação 
                 {
                     i=0;
                     
@@ -48,7 +48,7 @@ public class WaterPower extends CarroAzul
         }
         else
         {
-            contador++;
+            contador++; // contador é sempre incrementado
         }
     }
     //*** Movimentação ***
@@ -63,7 +63,7 @@ public class WaterPower extends CarroAzul
     {
         if(isTouching(Enemies.class))   
             {
-                //score.score1= score.score1 +5 ;
+                
                 getWorldOfType(Level1.class).addScore(10);
                 removeTouching(Enemies.class);
                 setLocation(getX(), 0);
