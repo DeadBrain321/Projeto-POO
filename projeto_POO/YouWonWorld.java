@@ -22,7 +22,7 @@ public class YouWonWorld extends World
     // *** Spawn do botão do next level ***
     public void prepare()
     {
-        addObject(new NextLevel(), getWidth()-100, getHeight()-100);
+        addObject(new TurnBack(), getWidth()-getWidth()/10, getHeight()-getHeight()/10);
         Greenfoot.playSound("You Win (Voice) - Sound Effect [HD].mp3");
     }
 }

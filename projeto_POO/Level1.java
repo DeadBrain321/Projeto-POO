@@ -42,7 +42,7 @@ public class Level1 extends World
 
         super(1200, 650, 1); 
         level1Spawn();
-        JOptionPane.showMessageDialog(null,"\t\t\t! Objetivo ! "); // Dá pop up de uma mensagem informativa com os breves objetivos do jogo
+        JOptionPane.showMessageDialog(null,"O objetivo é fazer com que estes carros amigos do ambiente sobrevivam à tremenda poluição do nosso mundo. \nSe sobreviverem durante o tempo desejado e tenham obtido uma pontuação de 700 pontos em conjunto o nosso planeta agradece!!\nAs nossa esperanças estão em vocês. Go get it!! "); // Dá pop up de uma mensagem informativa com os breves objetivos do jogo
 
         text1 = new Text(nomeCarroAzul);
         text2 = new Text(nomeCarroVermelho);
@@ -94,7 +94,7 @@ public class Level1 extends World
         carrinho2.turn (-90); // rotação do carroVermelho
         addObject(new Timer(), getWidth()/2 -130,30);
         addObject(vidaCheia,472,getHeight()-40);
-        addObject(vida2Cheia,735,getHeight()-40);
+        addObject(vida2Cheia,730,getHeight()-40);
 
         setPaintOrder(CarroAzul.class,CarroVermelho.class,Vida.class,Vida2.class,Text.class,WaterPower.class,FirePower.class,Coins.class,NeonEcologico.class,
             Fumo.class,Lixo.class,Timer.class,Level1BackgroundRoad.class,Level1Pavilon.class,Level1Rock.class,Level1Tree.class);
@@ -182,21 +182,21 @@ public class Level1 extends World
         vidaJogador2--;
 
         if(vidaJogador2 ==4 )
-            addObject( vida2Cheia,735,getHeight()-40);
+            addObject( vida2Cheia,730,getHeight()-40);
         if(vidaJogador2 ==3 )
         {
             removeObject(vida2Cheia);
-            addObject(vida2Menos1, 735,getHeight()-40);
+            addObject(vida2Menos1, 730,getHeight()-40);
         } 
         if(vidaJogador2 ==2 )
         {
             removeObject(vida2Menos1);
-            addObject( vida2Menos2,735,getHeight()-40);
+            addObject( vida2Menos2,730,getHeight()-40);
         } 
         if(vidaJogador2 ==1 )
         {
             removeObject(vida2Menos2);
-            addObject( vida2Menos3, 735,getHeight()-40);
+            addObject( vida2Menos3, 730,getHeight()-40);
 
         } 
         if(vidaJogador2==0)
@@ -212,7 +212,7 @@ public class Level1 extends World
     {
         scoreTotal = scoreTotal +num;
         showText("Score Total :" + scoreTotal, 600,90);
-        if( scoreTotal == 10){
+        if( scoreTotal == 700   ){
             backgroundMusic.stop();
             Greenfoot.setWorld(new YouWonWorld());
         }

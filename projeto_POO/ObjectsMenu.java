@@ -20,7 +20,7 @@ public class ObjectsMenu extends Actor
     // Faz animação dos botoẽs 
     
     
-    public void checkMouse() 
+    protected void checkMouse() 
     {
         if(Greenfoot.mouseMoved(null))
             mouseOver= Greenfoot.mouseMoved(this);
@@ -33,7 +33,7 @@ public class ObjectsMenu extends Actor
    
     }
 
-    public void ajustaTransparencia(int ajuste)
+    protected void ajustaTransparencia(int ajuste)
     {
         GreenfootImage imagemTemp= getImage();
         imagemTemp.setTransparency(ajuste);

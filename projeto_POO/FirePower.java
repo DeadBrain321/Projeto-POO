@@ -56,7 +56,7 @@ public class FirePower extends CarroVermelho
     //*** Movimentação ***
     public void movement()
     {
-        setLocation(getX(), getY()-1);
+        setLocation(getX(), getY()-3);
     }
     
     //*** Remover os inimigos e dar o score ***   

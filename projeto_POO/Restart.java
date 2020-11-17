@@ -29,6 +29,7 @@ public class Restart extends ObjectsMenu
     {
         if(Greenfoot.mouseClicked(this)==true || "r".equals(Greenfoot.getKey()) || "R".equals(Greenfoot.getKey()))
         {
+            Greenfoot.playSound("Sound Effect - DJ Stop (mp3cut.net).mp3");
             Greenfoot.setWorld(new Level1());
            
         }

@@ -23,11 +23,11 @@ public class Enemies extends Actor
         turn(num);
         //System.out.println("kappa"); just to verify the overloading
     }
-    //** Movimento Vertical dos objetos, depois tentar fazer IA
+    //** Movimento Vertical dos objetos
     protected void movimentoVertical()
     {   
        
-         setLocation(getX(),getY() +1);
+         setLocation(getX(),getY() +4);
          
     }
     //** remove os objetos quando chegam ao fim do mundo **

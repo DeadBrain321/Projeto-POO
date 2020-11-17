@@ -12,7 +12,23 @@ public class Player1 extends ObjectsMenu
      
     public void act() 
     {
+       reScale();
+       checkMouse();
+       mouseClick();
+    }
+    public void reScale()
+    
+    {
         img.scale(300,300);
         setImage(img);
-    }    
+    } 
+    public void mouseClick()
+    {
+        if(Greenfoot.mouseClicked(this)==true || "enter".equals(Greenfoot.getKey()))
+        {
+            Greenfoot.playSound("Mouse Click - Sound Effect (HD) (mp3cut.net).mp3");
+            Greenfoot.setWorld(new Level2());
+            
+        }
+    }
 }

@@ -24,6 +24,9 @@ public class TurnBack extends ObjectsMenu
      public void mouseclick()
      {
          if(Greenfoot.mouseClicked(this)==true || "esc".equals(Greenfoot.getKey()))
+         {
+            Greenfoot.playSound("Mouse Click - Sound Effect (HD) (mp3cut.net).mp3");
             Greenfoot.setWorld(new Menu());
-     }
+        }
+    }
 }
