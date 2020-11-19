@@ -19,6 +19,7 @@ public class GameOverWorld extends World
     private void prepare()
     {
         addObject(new Restart(), getWidth()-100, getHeight()-100);
+        addObject(new TurnBack(),100, getHeight()-100);
         Greenfoot.playSound("Game OverSound Effect (mp3cut.net).mp3");
         
     }

@@ -19,6 +19,7 @@ public class Menu extends World
         super(1200, 650, 1); 
         prepare();
     }
+    
     public void prepare()
     {
         addObject(new Logo(), getWidth()/2,getHeight()-525);

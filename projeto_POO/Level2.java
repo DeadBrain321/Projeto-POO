@@ -53,7 +53,7 @@ public class Level2 extends World
     {
         scoreTotal = scoreTotal +num;
         showText("Score Total : " + scoreTotal, 600,90);
-        if( scoreTotal == 700   ){
+        if( scoreTotal == 400   ){
             backgroundMusic.stop();
             Greenfoot.setWorld(new YouWonWorldLvl2());
         }

@@ -10,10 +10,11 @@ public class Bullet extends Gretha
 {
     
     private GreenfootImage img = getImage();
+    private GreenfootSound bala = new GreenfootSound("Emotional Greta Thunberg attacks world leaders How dare you (mp3cut.net).mp3");
     public void act() 
     {
        reScale();
-       move(6);
+       move(10);
        //removeBullets();
        removeEnemieLvl2();
     }    

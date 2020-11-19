@@ -10,14 +10,15 @@ public class Gretha extends Jogadores
 {
     
     private GreenfootImage img = getImage();
-    private GreenfootSound bala = new GreenfootSound("9mm glock - sound effect.mp3");
+    
     
     public void act() 
     {
-        //move();
+        
         reScale();
         clickShoot();
         hittingEnemies();
+        
     } 
     public void reScale()
     {
@@ -27,21 +28,24 @@ public class Gretha extends Jogadores
     
     public void clickShoot()
     {
+         GreenfootSound bala = new GreenfootSound("9mm glock - sound effect.mp3");
         if(Greenfoot.mouseClicked(null))
         {
             shoot();
+            bala.setVolume(50);
+            bala.play();
             
-            Greenfoot.playSound("9mm glock - sound effect.mp3");
         }
         
         }
     public void shoot()
      {
-        MouseInfo mouse = Greenfoot.getMouseInfo();
-        if(mouse == null)return;
-        int x = mouse.getX();
+        MouseInfo mouse = Greenfoot.getMouseInfo(); // cria um objeto da classe mouse e obtem a informação do mesmo
+        if(mouse == null)// se for nulo sai da funçao
+            return;
+        int x = mouse.getX();// obtem a posição atual do rato
         int y= mouse.getY();
-        Bullet bala = new Bullet();
+        Bullet bala = new Bullet();// fazendo com que adicione um objeto da classe Bullet
         getWorld().addObject(bala,getX(),getY());
         bala.turnTowards(x,y);
         

@@ -20,6 +20,9 @@ public class Instructions extends ObjectsMenu
     public void mouseClick()
     {
         if(Greenfoot.mouseClicked(this)==true || "enter".equals(Greenfoot.getKey()))
+        {
+            Greenfoot.playSound("Mouse Click - Sound Effect (HD) (mp3cut.net).mp3");
             Greenfoot.setWorld(new InstructionsWorld());
+        }
     }
 }
